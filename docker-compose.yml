@@ -1,0 +1,13 @@
+version: '3'
+services:
+  node:
+    image: node:14.5.0-alpine
+    tty: true
+    environment:
+      - NODE_ENV=production
+    volumes:
+    - ./:/usr/src/app
+    working_dir: /usr/src/app
+    command: sh -c "cd sample_app && yarn start"
+    ports:
+    - "3000:3000"
