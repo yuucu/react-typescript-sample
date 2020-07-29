@@ -8,6 +8,6 @@ services:
     volumes:
     - ./:/usr/src/app
     working_dir: /usr/src/app
-    command: sh -c "cd sample_app && yarn start"
+    command: sh -c "cd sample_app && yarn install && yarn start"
     ports:
     - "3000:3000"
